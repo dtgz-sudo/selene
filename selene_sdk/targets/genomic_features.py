@@ -292,6 +292,7 @@ class GenomicFeatures(Target):
 
     def _unpicklable_init(self):
         if not self._initialized:
+            print(self.input_path)
             self.data = tabix.open(self.input_path)
             self._initialized = True
 

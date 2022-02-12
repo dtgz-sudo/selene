@@ -9,6 +9,11 @@
 #SBATCH --mail-type=ALL
 #SBATCH --mail-user=<EMAIL>
 
-source activate selene-env
+#source activate selene-env
 
-python -u ../../../selene_cli.py ./train_and_eval.yml --lr=0.01
+
+
+#python -u ../../../selene_cli.py ./train_and_eval.yml --lr=0.01
+
+conda activate selene
+python -u  /root/Desktop/selene/selene_sdk/cli.py  ./train_and_eval.yml --lr=0.01

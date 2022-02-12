@@ -17,10 +17,10 @@ from selene_sdk import __version__
 from selene_sdk.utils import load_path, parse_configs_and_run
 
 
-@click.command()
-@click.version_option(__version__)
-@click.argument('path', type=click.Path(exists=True, file_okay=True, dir_okay=False))
-@click.option('--lr', type=float, help='If training, the optimizer learning rate', show_default=True)
+# @click.command()
+# @click.version_option(__version__)
+# @click.argument('path', type=click.Path(exists=True, file_okay=True, dir_okay=False))
+# @click.option('--lr', type=float, help='If training, the optimizer learning rate', show_default=True)
 def main(path, lr):
     """Build the model and trains it using user-specified input data."""
     configs = load_path(path, instantiate=False)
@@ -28,4 +28,5 @@ def main(path, lr):
 
 
 if __name__ == "__main__":
-    main()
+    # main()
+    main("/root/Desktop/selene/manuscript/case1/1_train_and_evaluate/train_and_eval.yml",0.01)
