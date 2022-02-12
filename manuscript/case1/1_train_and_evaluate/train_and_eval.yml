@@ -17,7 +17,7 @@ sampler: !obj:selene_sdk.samplers.IntervalsSampler {
     features: !obj:selene_sdk.utils.load_features_list {
         input_path: /root/Desktop/selene/manuscript/case1/data/distinct_features.txt
     },
-    target_path: /root/Desktop/selene/manuscript/case1/data/sorted_GATA1_proery_bm.bed.gz,
+    target_path: /root/Desktop/selene/manuscript/case1/data/GATA1_proery_bm.bed.gz,
     intervals_path: /root/Desktop/selene/manuscript/case1/data/hg38_TF_intervals.txt,
     test_holdout: [chr8, chr9],
     validation_holdout: [chr6, chr7],
@@ -36,7 +36,7 @@ train_model: !obj:selene_sdk.TrainModel {
     report_gt_feature_n_positives: 20,
     n_validation_samples: 32000,
     n_test_samples: 640000,
-    use_cuda: True,
+    use_cuda: false,
     data_parallel: True
 }
 output_dir: /root/Desktop/selene/manuscript/case1/training_outputs

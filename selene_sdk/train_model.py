@@ -248,11 +248,11 @@ class TrainModel(object):
             self.model = nn.DataParallel(model)
             logger.debug("Wrapped model in DataParallel")
 
-        #
-        # if self.use_cuda:
-        #     self.model.cuda()
-        #     self.criterion.cuda()
-        #     logger.debug("Set modules to use CUDA")
+
+        if self.use_cuda:
+            self.model.cuda()
+            self.criterion.cuda()
+            logger.debug("Set modules to use CUDA")
 
         self._report_gt_feature_n_positives = report_gt_feature_n_positives
         self._metrics = metrics
